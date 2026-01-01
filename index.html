@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>grid</title>
+        <style>
+            .grid-container{
+                display: grid;
+                grid-template-columns: repeat(4,1);
+                grid-template-areas: 
+                "one two three four"
+                "five  six six six";
+                gap: 6px;
+            }
+            .item{
+                padding: 20px;
+                background-color: #aef044;
+                border: #14b089;
+                font-weight: bold;
+                text-align: center;
+
+
+            }
+            .item-1{ grid-area: one; }
+            .item-2{ grid-area:two;}
+            .item-3{grid-area: three;}
+            .item-4{grid-area: four;}
+            .item-5{grid-area: five;}
+            .item-6{grid-area: six;}
+
+            .item:first-child{background-color: red; }
+            .item:nth-child{background-color: greenyellow; }
+            .item:nth-last-child{background-color: yellowgreen; }
+            .item:last-child(5){background-color: blueviolet; }
+            .item:hover{background-color: beige; }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
+            <div class="item item-5">5</div>
+            <div class="item item-6">6</div>
+        </div>
+    </body>
+</html>

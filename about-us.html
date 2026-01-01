@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>grid</title>
+    <style>
+        .grid-container{
+          display: grid;
+          grid-template-columns: repeat(1,4);
+          grid-template-areas:
+           "one two three four"
+           "five six six six";
+           gap: 6px;
+        }
+        .item{
+            padding: 20px;
+            background-color: #6feeb7;
+            border: 1px solid #c33131;
+            font-weight: bold;
+            text-align: center;
+        }
+        .item-1{grid-area:one;}
+        .item-2{grid-area:two;}
+        .item-3{grid-area:three;}
+        .item-4{grid-area:four;}
+        .item-5{grid-area:five;}
+        .item-6{grid-area:six;}
+        
+        .item:first-child{background-color: #80fcfc;}
+        .item:nth-child(2){background-color: #ef1a0b;}
+        .item:last-child{background-color: #fa574b;}
+        .item:last-child:hover{background-color: #c2e2ff;}
+        .item-3:hover{background-color: #a556ee;}
+
+        .grid-container-2{
+            display: grid;
+            grid-template-columns: repeat(1,4);
+            grid-template-areas: 
+            "one two three three"
+            "four four five six";
+            gap: 6px;
+        }
+        .items{
+            padding: 20px;
+            background-color: #ff7f50;
+            border: 1px solid #808080;
+            text-align: center;
+        }
+
+        .items:first-child{background-color: #ff7f50;}
+        .items:nth-child(3){background-color: #ffd700;}
+        .items:last-child:hover{background-color: #ffc0cb;}
+
+        .grid-container-2 .item img {
+            width: 200px;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="items item-1">1</div>
+        <div class="items item-2">2</div>
+        <div class="items item-3">3</div>
+        <div class="items item-4">4</div>
+        <div class="items item-5">5</div>
+        <div class="items item-6">6</div>
+    </div>
+
+    <div class="row">&nbsp;</div>
+
+    <div class="grid-container-2">
+        <div class="item item-1"><img src="images/1.webp"/></div>
+        <div class="item item-2"><img src="images/ervgd.jpg" /></div>
+        <div class="item item-3"><img src="images/images (1).jpg" /></div>
+        <div class="item item-4"><img src="images/images.jpg" /></div>
+        <div class="item item-5"><img src="images/qef.webp" /></div>
+        <div class="item item-6"><img src="images/wetrg.avif" /></div>
+    </div>
+
+</body>
+
+</html>
